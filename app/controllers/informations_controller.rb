@@ -1,7 +1,7 @@
 class InformationsController < ApplicationController
 
 
-  def index #今回は１人分のデータしか表示しないので必要ないかも
+  def index #（最終的には）過去に登録していた人は、該当idのデータ表示とする
   end
 
   def new
@@ -12,7 +12,7 @@ class InformationsController < ApplicationController
     @information = Information.create(information_params)
 
     if @information.save
-      redirect_to root_path
+      redirect_to information_path(@information)
     else
       render :new
     end
@@ -22,27 +22,28 @@ class InformationsController < ApplicationController
     @information = Information.find(params[:id])
   end
 
-  # def update
-  #   @information = Information.find(params[:id])
+  def update
+    @information = Information.find(params[:id])
 
-  #   if @information.update(information_params)
-  #     redirect_to @information
-  #   else
-  #     render :edit
-  #   end
+    if @information.update(information_params)
+      redirect_to @information
+    else
+      render :edit
+    end
 
-  # end
+  end
 
-  # def destroy
-  #   @information = Information.find(params[:id])
-  #   information.destroy
+  def destroy
+    @information = Information.find(params[:id])
+    information.destroy
 
-  #   # redirect_to new_user_path #top pageに移動するように設定する
-  # end
+    redirect_to root_path
 
-  # def edit
-  #   @information = Information.find(params[:id])
-  # end
+  end
+
+  def edit
+    @information = Information.find(params[:id])
+  end
 
   
 
