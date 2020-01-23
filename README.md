@@ -18,7 +18,7 @@
 |usage_antithrombotic|text||
 |hypertension|boolean|null: false|
 |medication_hypertension|text||
-|diabetes|integer|null: false|
+|diabetes|boolean|null: false|
 |medication_diabetes|text||
 |hyperlipidemia|boolean|null: false|
 |medication_hyperlipidemia|text||
@@ -27,6 +27,23 @@
 |residence|boolean|null: false|
 |activity_outside|boolean|null: false|
 |activity_inside|boolean|null: false|
+
+## simpleinfosテーブル
+<!-- informationは1-1の関係をuserと有している-->
+|Column|Type|Options|
+|------|----|-------|
+|intracranial_hemorrhage|booleanr|null: false|
+|infraction_episodes|boolean|null: false|
+|usage_antithrombotic|boolean|null: false|
+|hypertension|boolean|null: false|
+|diabetes|boolean|null: false|
+|hyperlipidemia|boolean|null: false|
+|liver_malfunction|boolean|null: false|
+|kidney_malfunction|boolean|null: false|
+|residence|boolean|null: false|
+|activity_outside|boolean|null: false|
+|activity_inside|boolean|null: false|
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

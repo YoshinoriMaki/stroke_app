@@ -12,7 +12,7 @@ class InformationsController < ApplicationController
     @information = Information.create(information_params)
 
     if @information.save
-      redirect_to information_path
+      redirect_to information_path(@information)
     else
       render :new
     end
