@@ -16,64 +16,73 @@
     = form_for @information, url: new_information_path do |f|
       .medical-history__intracranial-hemorrhage
         脳出血やくも膜下出血になったことはありますか？
-        = f.radio_button :intracranial_hemorrhage, 0
-        = f.label :intracranial_hemorrhage, "ある", class: 'medical-history__intracranial-hemorrhage__selection-box1'
-        = f.radio_button :intracranial_hemorrhage, 1
-        = f.label :intracranial_hemorrhage, "なし", class: 'medical-history__intracranial-hemorrhage__selection-box2'
+        .medical-history__intracranial-hemorrhage__choices
+          = f.radio_button :intracranial_hemorrhage, 0
+          = f.label :intracranial_hemorrhage, "ある", class: 'medical-history__intracranial-hemorrhage__choices__selection-box1'
+          = f.radio_button :intracranial_hemorrhage, 1
+          = f.label :intracranial_hemorrhage, "なし", class: 'medical-history__intracranial-hemorrhage__choices__selection-box2'
         
       .medical-history__infraction-events
         脳梗塞もしくは心筋梗塞/狭心症にかかったことはありますか？
-        = f.radio_button :infraction_episodes, 0
-        = f.label :infraction_episodes, "ある", class: 'medical-history__infraction-events__selection-box1'   
-        = f.radio_button :infraction_episodes, 1
-        =f.label :infraction_episodes, "なし", class: 'medical-history__infraction-events__selection-box2'    
-        .medical-history__infraction-events__antithrombotic
-          血をサラサラにするお薬を飲んでいますか？
+        .medical-history__infraction-events__choices
+          = f.radio_button :infraction_episodes, 0
+          = f.label :infraction_episodes, "ある", class: 'medical-history__infraction-events__choices__selection-box1'   
+          = f.radio_button :infraction_episodes, 1
+          = f.label :infraction_episodes, "なし", class: 'medical-history__infraction-events__choices__selection-box2'    
+
+      .medical-history__antithrombotic
+        血をサラサラにするお薬を飲んでいますか？
+        .medical-history__antithrombotic__sections
           = f.radio_button :usage_antithrombotic, 0
-          = f.label :usage_antithrombotic, "ある", class: 'medical-history__infraction-events__antithrombotic__selection-box1'
+          = f.label :usage_antithrombotic, "ある", class: 'medical-history__antithrombotic__sections__selection-box1'
           = f.radio_button :usage_antithrombotic, 1
-          = f.label :usage_antithrombotic, "なし", class: 'medical-history__infraction-events__antithrombotic__selection-box2'
-          = f.text_field :usage_antithrombotic2, class: 'medical-history__infraction-events__antithrombotic__usage', placeholder: '<薬の名前を教えてください>'
+          = f.label :usage_antithrombotic, "なし", class: 'medical-history__antithrombotic__sections__selection-box2'
+        = f.text_field :usage_antithrombotic2, class: 'medical-history__antithrombotic__usage', placeholder: '<薬の名前を教えてください>'
 
       .medical-history__hypertension
         高血圧と言われたことがありますか？
-        = f.radio_button :hypertension, 0
-        = f.label :hypertension, "ある", class: 'medical-history__hypertension__selection-box1'
-        = f.radio_button :hypertension, 1
-        = f.label :hypertension, "なし", class: 'medical-history__hypertension__selection-box2'
+        .medical-history__hypertension__sections
+          = f.radio_button :hypertension, 0
+          = f.label :hypertension, "ある", class: 'medical-history__hypertension__sections__selection-box1'
+          = f.radio_button :hypertension, 1
+          = f.label :hypertension, "なし", class: 'medical-history__hypertension__ssections__election-box2'
         = f.text_field :medication_hypertension, class: 'medical-history__hypertension__medication', placeholder: '<薬の名前を教えてください>'
           
 
       .medical-history__diabetes
         糖尿病と言われたことがありますか？
-        = f.radio_button :diabetes, 0
-        = f.label :diabetes, "ある", class: 'medical-history__diabetes__selection-box1'
-        = f.radio_button :diabetes, 1
-        = f.label :diabetes, "なし", class: 'medical-history__diabetes__selection-box2'
+        .medical-history__diabetes__sections
+          = f.radio_button :diabetes, 0
+          = f.label :diabetes, "ある", class: 'medical-history__diabetes__selection-box1'
+          = f.radio_button :diabetes, 1
+          = f.label :diabetes, "なし", class: 'medical-history__diabetes__selection-box2'
         = f.text_field :medication_diabetes, class: 'medical-history__diabetes__medication', placeholder: '<薬の名前を教えてください>'
        
 
       .medical-history__hyperlipidemia
         高脂血症と言われたことがありますか？
-        = f.radio_button :hyperlipidemia, 0
-        = f.label :hyperlipidemia, "ある", class: 'medical-history__hyperlipidemia__selection-box1'
-        = f.radio_button :hyperlipidemia, 1
-        = f.label :hyperlipidemia, "なし", class: 'medical-history__hyperlipidemia__selection-box2'
+        .medical-history__hyperlipidemia__sections
+          = f.radio_button :hyperlipidemia, 0
+          = f.label :hyperlipidemia, "ある", class: 'medical-history__hyperlipidemia__selection-box1'
+          = f.radio_button :hyperlipidemia, 1
+          = f.label :hyperlipidemia, "なし", class: 'medical-history__hyperlipidemia__selection-box2'
         = f.text_field :medication_hyperlipidemia, class: 'medical-history__hyperlipidemia__medication', placeholder: '<薬の名前を教えてください>'
 
       .medical-history__kidney-malfunction
         腎機能障害（腎臓が悪い）と言われたことがありますか？
-        = f.radio_button :kidney_malfunction, 0
-        = f.label :kidney_malfunction, "ある", class: 'medical-history__kidney-malfunction__selection-box1'
-        = f.radio_button :kidney_malfunction, 1
-        = f.label :kidney_malfunction, "なし", class: 'medical-history__kidney-malfunction__selection-box2'
+        .medical-history__kidney-malfunction__choices
+          = f.radio_button :kidney_malfunction, 0
+          = f.label :kidney_malfunction, "ある", class: 'medical-history__kidney-malfunction__choices__selection-box1'
+          = f.radio_button :kidney_malfunction, 1
+          = f.label :kidney_malfunction, "なし", class: 'medical-history__kidney-malfunction__choices__selection-box2'
         
       .medical-history__liver-malfunction
         肝機能障害（肝臓が悪い）と言われたことがありますか？
-        = f.radio_button :liver_malfunction, 0
-        = f.label :liver_malfunction, "ある", class: 'medical-history__liver-malfunction__selection-box1'
-        = f.radio_button :liver_malfunction, 1
-        = f.label :liver_malfunction, "なし", class: 'medical-history__liver-malfunction__selection-box2'
+        .medical-history__liver-malfunction__choices
+          = f.radio_button :liver_malfunction, 0
+          = f.label :liver_malfunction, "ある", class: 'medical-history__liver-malfunction__choices__selection-box1'
+          = f.radio_button :liver_malfunction, 1
+          = f.label :liver_malfunction, "なし", class: 'medical-history__liver-malfunction__choices__selection-box2'
           
 
     .lifestyle-title
@@ -83,26 +92,32 @@
       = form_for @information, url: new_information_path do |f|
         .lifestyle__residence
           現在の住居はどちらですか？
-          = f.radio_button :residence, 0
-          = f.label :residence, "自宅", class: 'lifestyle__residence__selection-box1'
-          = f.radio_button :residence, 1
-          = f.label :residence, "自宅以外（施設、病院など）", class: 'lifestyle__residence__selection-box2'
+          .lifestyle__residence__choices
+            = f.radio_button :residence, 0
+            = f.label :residence, "自宅", class: 'lifestyle__residence__choices__selection-box1'
+            = f.radio_button :residence, 1
+            = f.label :residence, "自宅以外（施設、病院など）", class: 'lifestyle__residence__choices__selection-box2'
 
         .lifestyle__activity-outside
           普段外出はしていますか？
-          = f.radio_button :activity_outside, 0
-          = f.label :activity_outside, "一人で外出する", class: 'lifestyle__activity-outside__selection-box1'
-          = f.radio_button :activity_outside, 1
-          = f.label :activity_outside, "一人では外出できない", class: 'lifestyle__activity-outside__selection-box2'
+          .lifestyle__activity-outside__choices
+            = f.radio_button :activity_outside, 0
+            = f.label :activity_outside, "一人で外出する", class: 'lifestyle__activity-outside__choices__selection-box1'
+            = f.radio_button :activity_outside, 1
+            = f.label :activity_outside, "一人では外出できない", class: 'lifestyle__activity-outside__choices__selection-box2'
         
         .lifestyle__activity-inside
           自宅内では普段どのように過ごしていますか？
-          = f.radio_button :activity_inside, 0
-          = f.label :activity_inside, "ほぼ自立", class: 'lifestyle__activity-inside__selection-box1'
-          = f.radio_button :activity_inside, 1
-          = f.label :activity_inside, "介助が必要", class: 'lifestyle__activity-inside__selection-box2'
-    
-    -# = link_to information_path, class: "submission-btn" do
-    -#   登録する
+          .lifestyle__activity-inside__choices
+            = f.radio_button :activity_inside, 0
+            = f.label :activity_inside, "ほぼ自立", class: 'lifestyle__activity-inside__choices__selection-box1'
+            = f.radio_button :activity_inside, 1
+            = f.label :activity_inside, "介助が必要", class: 'lifestyle__activity-inside__choices__selection-box2'
+  .link-options  
+    = link_to root_path, method: :post, class: "link-options__submission-btn1" do
+      登録する
+  
+    = link_to root_path, method: :get, class: "link-options__submission-btn2" do
+      戻る
 
   

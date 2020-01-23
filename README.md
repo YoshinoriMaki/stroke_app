@@ -4,7 +4,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|birthday|string|null: false|
+|birthday|date|null: false|
 |age|string|null: false|
 |sex|boolean|null: false|
 

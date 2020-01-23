@@ -41,11 +41,13 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 60%;
-      &__selection-box {
-        margin: 3px 0px;
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
       }
-    }
-    
+    } 
+
     &__infraction-events {
       padding: 8px 19px;
       margin: 2em 15%;
@@ -55,25 +57,31 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 70%;
-      &__selection-box {
-        margin: 3px 0px;
-        
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
+       }
       }
-      
-      &__antithrombotic {
-        padding: 8px 19px;
-        margin: 2em 0;
-        color: #2c2c2f;
-        background: #cde4ff;
-        border-top: solid 5px #5989cf;
-        border-bottom: solid 5px #5989cf;
-        font-size: 20px;
-
-        &__selection-box {
-          margin: 5px 0px;
-        }
-        &__usage {
-        }
+    
+    &__antithrombotic {
+      padding: 8px 19px;
+      margin: 2em 15%;
+      color: #2c2c2f;
+      background: #cde4ff;
+      border-top: solid 5px #5989cf;
+      border-bottom: solid 5px #5989cf;
+      font-size: 20px;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      &__sections {
+        &__selection-box1 {
+            margin-right: 10px;    
+          }
+      &__usage {
+          display: 1;
+         }         
       }
     }
 
@@ -86,13 +94,19 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 60%;
+      display: flex;
+      flex-direction: column;
 
-      &__selection-box {
-        margin: 5px 0px;
-      }
+      &__sections {
+        &__selection-box1 {
+          margin-right: 10px;   
+        }
       &__medication {
-
+        display: 1;
+       
       }
+      }
+      
     }
     
     &__diabetes {
@@ -104,12 +118,16 @@
         border-bottom: solid 5px #5989cf;
         font-size: 20px;
         width: 60%;
+        display: flex;
+        flex-direction: column;
 
-      &__selection-box {
-        margin: 5px 0px;
-      }
-      &__medication {
-
+        &__sections {
+          &__selection-box1 {
+            margin-right: 10px;    
+          }
+        &__medication {
+          display: 1;
+        }
       }
     }
     
@@ -122,12 +140,16 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 60%;
+      display: flex;
+      flex-direction: column;
 
-      &__selection-box {
-        margin: 5px 0px;
-      }
+      &__sections {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
       &__medication {
-
+        display: 1;
+      }
       }
     }
 
@@ -140,13 +162,12 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 60%;
-
-
-      &__selection-box {
-        margin: 3px 0px;
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
       }
     }
-    
     &__liver-malfunction {
       padding: 8px 19px;
       margin: 2em 20%;
@@ -156,10 +177,10 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 60%;
-
-
-      &__selection-box {
-        margin: 3px 0px;
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
       }
       }
     }
@@ -187,8 +208,10 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 50%;
-
-      &__selection-box {
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
       }
     }
 
@@ -201,8 +224,10 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 50%;
-
-      &__selection-box {
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
       }
     }
     
@@ -215,13 +240,23 @@
       border-bottom: solid 5px #5989cf;
       font-size: 20px;
       width: 50%;
-
-      &__selection-box {
-      }   
+      &__choices {
+        &__selection-box1 {
+          margin-right: 10px;    
+        }
+      }  
     }
-
-  // .submission-btn {
-  //   font-size: 20px;
-  //   }
-
    }
+
+  .link-options {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    margin-bottom: 5px;
+
+    &__submission-btn1 {
+    }
+    &__submission-btn2 {
+    }
+  }
