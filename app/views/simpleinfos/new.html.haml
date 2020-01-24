@@ -13,7 +13,7 @@
     <<病気の情報を教えてください>>
 
   .medical-history
-    = form_for @information, url: new_information_path do |f|
+    = form_for @simpleinfo, url: new_simpleinfo_path do |f|
       .medical-history__intracranial-hemorrhage
         脳出血やくも膜下出血になったことはありますか？
         .medical-history__intracranial-hemorrhage__choices
@@ -37,7 +37,6 @@
           = f.label :usage_antithrombotic, "ある", class: 'medical-history__antithrombotic__sections__selection-box1'
           = f.radio_button :usage_antithrombotic, 1
           = f.label :usage_antithrombotic, "なし", class: 'medical-history__antithrombotic__sections__selection-box2'
-        = f.text_field :usage_antithrombotic2, class: 'medical-history__antithrombotic__usage', placeholder: '<薬の名前を教えてください>'
 
       .medical-history__hypertension
         高血圧と言われたことがありますか？
@@ -46,7 +45,6 @@
           = f.label :hypertension, "ある", class: 'medical-history__hypertension__sections__selection-box1'
           = f.radio_button :hypertension, 1
           = f.label :hypertension, "なし", class: 'medical-history__hypertension__ssections__election-box2'
-        = f.text_field :medication_hypertension, class: 'medical-history__hypertension__medication', placeholder: '<薬の名前を教えてください>'
           
 
       .medical-history__diabetes
@@ -56,7 +54,6 @@
           = f.label :diabetes, "ある", class: 'medical-history__diabetes__selection-box1'
           = f.radio_button :diabetes, 1
           = f.label :diabetes, "なし", class: 'medical-history__diabetes__selection-box2'
-        = f.text_field :medication_diabetes, class: 'medical-history__diabetes__medication', placeholder: '<薬の名前を教えてください>'
        
 
       .medical-history__hyperlipidemia
@@ -66,7 +63,6 @@
           = f.label :hyperlipidemia, "ある", class: 'medical-history__hyperlipidemia__selection-box1'
           = f.radio_button :hyperlipidemia, 1
           = f.label :hyperlipidemia, "なし", class: 'medical-history__hyperlipidemia__selection-box2'
-        = f.text_field :medication_hyperlipidemia, class: 'medical-history__hyperlipidemia__medication', placeholder: '<薬の名前を教えてください>'
 
       .medical-history__kidney-malfunction
         腎機能障害（腎臓が悪い）と言われたことがありますか？
@@ -89,7 +85,7 @@
       <<現在の生活状況を簡単に教えてください>>
 
     .lifestyle
-      = form_for @information, url: new_information_path do |f|
+      = form_for @simpleinfo, url: new_simpleinfo_path do |f|
         .lifestyle__residence
           現在の住居はどちらですか？
           .lifestyle__residence__choices
@@ -114,7 +110,7 @@
             = f.radio_button :activity_inside, 1
             = f.label :activity_inside, "介助が必要", class: 'lifestyle__activity-inside__choices__selection-box2'
   .link-options  
-    = link_to "/informations", method: :post, class: "link-options__submission-btn1" do
+    = link_to simpleinfos_path, method: :post, class: "link-options__submission-btn1" do
       登録する
   
     = link_to root_path, method: :get, class: "link-options__submission-btn2" do

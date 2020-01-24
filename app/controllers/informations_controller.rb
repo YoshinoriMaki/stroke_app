@@ -34,7 +34,7 @@ class InformationsController < ApplicationController
   end
 
   def destroy
-    @information = Information.find(params[:id])
+    information = Information.find(params[:id])
     information.destroy
 
     redirect_to root_path
@@ -50,7 +50,7 @@ class InformationsController < ApplicationController
   private
 
   def information_params
-   params.require(:information).permit(:intracranial_hemorrhage, :infraction_episodes, :usage_antithrombotic, :usage_antithrombotic, :hypertension, :medication_hypertension, :diabetes, :medication_diabetes, :hyperlipidemia, :medication_hyperlipidemia, :liver_malfunction, :kidney_malfunction, :residence, :activity_outside, :activity_inside)
+   params.require(:information).permit(:intracranial_hemorrhage, :infraction_episodes, :usage_antithrombotic, :usage_antithrombotic2, :hypertension, :medication_hypertension, :diabetes, :medication_diabetes, :hyperlipidemia, :medication_hyperlipidemia, :liver_malfunction, :kidney_malfunction, :residence, :activity_outside, :activity_inside)
   end
   
 end
